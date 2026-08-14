@@ -6,8 +6,21 @@
 </head>
 <body>
     <h1 th:text="${saludo}">Autos</h1>
-    <ul>
-        <li th:each="a : ${autos}" th:text="${a.modelo} + ' | Placa: ' + ${a.placa} + ' | Año: ' + ${a.anio} + ' | Color: ' + ${a.color} + ' | KM: ' + ${a.kilometraje}">Auto</li>
-    </ul>
+    <table border="1">
+        <tr>
+            <th>Placa</th>
+            <th>Modelo</th>
+            <th>Año</th>
+            <th>Color</th>
+            <th>Kilometraje</th>
+        </tr>
+        <tr th:each="a : ${autos}">
+            <td th:text="${a.placa}"></td>
+            <td th:text="${a.modelo}"></td>
+            <td th:text="${a.anio}"></td>
+            <td th:text="${a.color}"></td>
+            <td th:text="${a.kilometraje}"></td>
+        </tr>
+    </table>
 </body>
 </html>
