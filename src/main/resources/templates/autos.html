@@ -7,8 +7,17 @@
 <body>
     <h1 th:text="${saludo}">Lista de Autos</h1>
 
-    <ol>
-        <li th:each="a : ${autos}" th:text="${a.modelo} + ' - Placa: ' + ${a.placa} + ' - Año: ' + ${a.anio} + ' - Color: ' + ${a.color} + ' - KM: ' + ${a.kilometraje}">Auto</li>
-    </ol>
+    <ul>
+        <li th:each="a : ${autos}">
+            <strong th:text="${a.modelo}">Modelo</strong>
+            <ul>
+                <li th:text="'Placa: ' + ${a.placa}">Placa</li>
+                <li th:text="'Año: ' + ${a.anio}">Año</li>
+                <li th:text="'Color: ' + ${a.color}">Color</li>
+                <li th:text="'Kilometraje: ' + ${a.kilometraje} + ' km'">Kilometraje</li>
+            </ul>
+            <br>
+        </li>
+    </ul>
 </body>
 </html>
