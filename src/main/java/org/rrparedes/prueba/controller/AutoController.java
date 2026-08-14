@@ -14,14 +14,14 @@ public class AutoController {
     @GetMapping({"/autos"})
     public String autos(Model model) {
 
-        Auto a1 = new Auto("XBA-1010", "totoya Yaris", 2023, "Plateado", 12500.0);
+        Auto a1 = new Auto("THX-8888", "totoya Hilux", 2024, "Negro", 5000.0);
 
         List<Auto> autos = new ArrayList<>();
         autos.add(a1);
-        autos.add(new Auto("PCH-2020", "Chevrolet Sail", 2021, "Azul Marino", 48000.0));
-        autos.add(new Auto("FMD-3030", "Ford Mustang", 2022, "Amarillo", 25000.0));
-        autos.add(new Auto("KSP-4040", "Kia Sportage", 2024, "Blanco Perla", 8000.0));
-        autos.add(new Auto("MCX-5050", "Mazda CX-5", 2020, "Rojo Cereza", 62000.0));
+        autos.add(new Auto("NFR-7777", "Nissan Frontier", 2023, "Gris Metalizado", 18500.0));
+        autos.add(new Auto("HTC-5555", "Hyundai Tucson", 2022, "Azul", 32000.0));
+        autos.add(new Auto("VAK-3333", "Volkswagen Amarok", 2021, "Blanco", 54000.0));
+        autos.add(new Auto("SVT-1111", "Suzuki Vitara", 2020, "Verde", 67000.0));
 
         model.addAttribute("saludo", "Catálogo de Vehículos Registrados");
         model.addAttribute("auto", a1);
