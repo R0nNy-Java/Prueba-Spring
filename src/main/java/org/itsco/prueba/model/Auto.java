@@ -1,4 +1,4 @@
-package org.rrparedes.prueba.model;
+package org.itsco.prueba.model;
 
 public class Auto {
     private String placa;
@@ -6,6 +6,7 @@ public class Auto {
     private int anio;
     private String color;
     private double kilometraje;
+    private int marchas;
 
     public Auto() {
     }
@@ -16,6 +17,15 @@ public class Auto {
         this.anio = anio;
         this.color = color;
         this.kilometraje = kilometraje;
+    }
+
+    public Auto(String placa, String modelo, int anio, String color, double kilometraje, int marchas) {
+        this.placa = placa;
+        this.modelo = modelo;
+        this.anio = anio;
+        this.color = color;
+        this.kilometraje = kilometraje;
+        this.marchas = marchas;
     }
 
     public String getPlaca() {
@@ -56,5 +66,13 @@ public class Auto {
 
     public void setKilometraje(double kilometraje) {
         this.kilometraje = kilometraje;
+    }
+
+    public int getMarchas() {
+        return marchas;
+    }
+
+    public void setMarchas(int marchas) {
+        this.marchas = marchas;
     }
 }

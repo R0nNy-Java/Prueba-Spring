@@ -1,4 +1,4 @@
-package org.rrparedes.prueba;
+package org.itsco.prueba;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

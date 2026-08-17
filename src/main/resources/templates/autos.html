@@ -6,18 +6,43 @@
 </head>
 <body>
     <h1 th:text="${saludo}">Autos</h1>
+
+    <!-- Tabla con validaciones condicionales en Thymeleaf -->
     <table border="1">
         <tr>
             <th>Placa</th>
             <th>Modelo</th>
             <th>Año</th>
+            <th>Gama / Categoría</th>
+            <th>Marchas</th>
+            <th>Rendimiento (Condicional)</th>
             <th>Color</th>
             <th>Kilometraje</th>
         </tr>
+
+        <!-- Recorremos la lista de autos con th:each -->
         <tr th:each="a : ${autos}">
             <td th:text="${a.placa}"></td>
             <td th:text="${a.modelo}"></td>
             <td th:text="${a.anio}"></td>
+
+            <!-- Condicional 1 por Año (Gama Alta vs Gama Media) -->
+            <td>
+                <span th:if="${a.anio >= 2022}">Auto gama alta</span>
+                <span th:unless="${a.anio >= 2022}">Gama media</span>
+            </td>
+
+            <td th:text="${a.marchas}"></td>
+
+            <!-- Condicional 2 por Marchas (Veloz vs Fuerza) -->
+            <td>
+                <!-- th:if: Si las marchas son >= 6 es Veloz -->
+                <span th:if="${a.marchas >= 6}">Veloz</span>
+
+                <!-- th:unless: Si NO son >= 6 (menor a 6) es Fuerza -->
+                <span th:unless="${a.marchas >= 6}">Fuerza</span>
+            </td>
+
             <td th:text="${a.color}"></td>
             <td th:text="${a.kilometraje}"></td>
         </tr>
